@@ -4,6 +4,10 @@ import 'package:flash_chat/screens/login_screen.dart';
 import 'package:flash_chat/screens/registration_screen.dart';
 import 'package:flash_chat/screens/chat_screen.dart';
 
+// Firebase initialization
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
 void main() => runApp(FlashChat());
 
 class FlashChat extends StatelessWidget {
