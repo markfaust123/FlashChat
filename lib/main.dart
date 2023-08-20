@@ -5,8 +5,14 @@ import 'package:flash_chat/screens/registration_screen.dart';
 import 'package:flash_chat/screens/chat_screen.dart';
 
 // Firebase initialization
-import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+// await Firebase.initializeApp(
+// options: DefaultFirebaseOptions.currentPlatform,
+// );
 
 void main() => runApp(FlashChat());
 
