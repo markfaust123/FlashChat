@@ -7,20 +7,22 @@ import 'package:flash_chat/screens/chat_screen.dart';
 // Firebase initialization
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
-// await Firebase.initializeApp(
-// options: DefaultFirebaseOptions.currentPlatform,
-// );
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-void main() => runApp(FlashChat());
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  runApp(FlashChat());
+}
 
 class FlashChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
+      theme: ThemeData.light().copyWith(
         textTheme: TextTheme(
           bodyMedium: TextStyle(color: Colors.black54),
         ),
